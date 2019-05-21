@@ -1,6 +1,19 @@
 # SDMF
 Sparse Concept Discriminant Matrix Factorization (TCSVT-18)
 
-Abstract:
+Hightlights:
 
-The key ingredients of matrix factorization lie in the basis learning and coefficient representation. To enhance the discriminant ability of the learnt basis, discriminant graph embedding is usually introduced in matrix factorization model. However, existing matrix factorization methods based on graph embedding generally conduct discriminant analysis via a single type of adjacency graphs, either similarity-based graphs (e.g., Laplacian eigenmaps graph) or reconstruction-based graphs (e.g., $\small \textit{L}_1$-graph), while ignoring the cooperation of different types of adjacency graphs that can better depict the discriminant structure of original data. To address the above issue, we propose a novel Fisher-like criterion, based on graph embedding, to extract sufficient discriminant information via two different types of adjacency graphs\textrm{---}One graph preserves the reconstruction relationships of neighboring samples in the same category, and the other suppresses the similarity relationships of neighboring samples from different categories. Moreover, we also leverage sparse coding to promote the sparsity of the coefficients. By virtue of the proposed Fisher-like criterion and sparse coding, a new matrix factorization framework called Sparse concept Discriminant Matrix Factorization (SDMF) is proposed for efficient image representation. Furthermore, we extend the Fisher-like criterion to an unsupervised context, thus yielding an unsupervised version of SDMF. Experimental results on seven benchmark datasets demonstrate the effectiveness and efficiency of the proposed SDMFs on both image classification and clustering tasks.
+1. We develop a novel Fisher-like criterion to extract sufficient discriminant information via two different types of adjacency graphs, i.e., reconstruction-based graph and similarity-based graph, which can provide a new insight into the graph embedding strategies for building local relationships of image data.
+2. We extend the Fisher-like criterion to an unsupervised context by proposing two heuristic strategies, i.e., k-NN strategy and H-NN strategy.
+3. By virtue of the Fisher-like criterion and sparse coding, we propose a new matrix factorization framework, i.e., SDMF, for efficient image representation. Moreover, for the sake of computational cost, we launch an aggressive optimization strategy to solve the SDMF model.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+MATLAB implementation of Sparse Concept Discriminant Matrix Factorization (SDMF) [1]
+
+If you find this software useful and use it in your own work, please cite our paper:
+
+[1] M. Pang, Y.M. Cheung, R.S. Liu, J. Lou and C. Lin, “Toward Efficient Image Representation: Sparse Concept Discriminant Matrix Factorization”, IEEE Transactions on Circuits and Systems for Video Technology, 2019.
+
+The software is free for academic use, and shall not be used, rewritten, or adapted as the basis of a commercial product without first obtaining permission from the authors. The authors make no representations about the suitability of this software for any purpose. It is provided "as is" without express or implied warranty.
+
+
